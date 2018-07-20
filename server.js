@@ -43,10 +43,7 @@ function handleEvent(event) {
       msg = Math.floor(Math.random() * 20) + 1;
     } else if(event.message.text.toLowerCase() == "roll d100"){
       msg = Math.floor(Math.random() * 100) + 1;
-    } else {
-      msg = "...";
     }
-
 
     const echo = { type: 'text', text: msg };
     return client.replyMessage(event.replyToken, echo);
