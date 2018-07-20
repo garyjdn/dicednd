@@ -31,22 +31,37 @@ function handleEvent(event) {
   
     if(event.message.text.toLowerCase() == "roll d2"){
       msg = Math.floor(Math.random() * 2) + 1;
+      const echo = { type: 'text', text: msg };
+      return client.replyMessage(event.replyToken, echo);
     } else if(event.message.text.toLowerCase() == "roll d4"){
       msg = Math.floor(Math.random() * 4) + 1;
+      const echo = { type: 'text', text: msg };
+      return client.replyMessage(event.replyToken, echo);
     } else if(event.message.text.toLowerCase() == "roll d6"){
       msg = Math.floor(Math.random() * 6) + 1;
+      const echo = { type: 'text', text: msg };
+      return client.replyMessage(event.replyToken, echo);
     } else if(event.message.text.toLowerCase() == "roll d8"){
       msg = Math.floor(Math.random() * 8) + 1;
+      const echo = { type: 'text', text: msg };
+      return client.replyMessage(event.replyToken, echo);
     } else if(event.message.text.toLowerCase() == "roll d10"){
       msg = Math.floor(Math.random() * 10) + 1;
+      const echo = { type: 'text', text: msg };
+      return client.replyMessage(event.replyToken, echo);
     } else if(event.message.text.toLowerCase() == "roll d20"){
       msg = Math.floor(Math.random() * 20) + 1;
+      const echo = { type: 'text', text: msg };
+      return client.replyMessage(event.replyToken, echo);
     } else if(event.message.text.toLowerCase() == "roll d100"){
       msg = Math.floor(Math.random() * 100) + 1;
+      const echo = { type: 'text', text: msg };
+      return client.replyMessage(event.replyToken, echo);
+    } else if(event.message.text.toLowerCase() == "roll help"){
+      msg = 'This bot is created by Gary\nCommand list:\n-Roll d2\n-Roll d4\n-Roll d6\n-Roll d8\nRoll -d10\n-Roll d20\n-Roll d100'
+      const echo = { type: 'text', text: msg };
+      return client.replyMessage(event.replyToken, echo);
     }
-
-    const echo = { type: 'text', text: msg };
-    return client.replyMessage(event.replyToken, echo);
 }
 
 // listen on port
