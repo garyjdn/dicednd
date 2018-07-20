@@ -23,6 +23,10 @@ app.post('/callback', line.middleware(config), (req, res) => {
 
 });
 
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+})
+
 function handleEvent(event) {
   
     if(event.message.text.toLowerCase() == "roll d2"){
@@ -49,7 +53,5 @@ function handleEvent(event) {
 }
 
 // listen on port
-const port = 3000;
-app.listen(port, () => {
-  console.log(`listening on ${port}`);
-});
+const PORT = process.env.PORT || 5000
+app.listen(PORT, () => console.log(`listening on ${PORT}`));
