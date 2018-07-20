@@ -58,7 +58,7 @@ function handleEvent(event) {
       const echo = { type: 'text', text: msg };
       return client.replyMessage(event.replyToken, echo);
     } else if(event.message.text.toLowerCase() == "roll help"){
-      msg = 'Command list:\n-Roll d2\n-Roll d4\n-Roll d6\n-Roll d8\n-Roll d10\n-Roll d20\n-Roll d100\n\nThis Bot is created by Gary Jardin & C. Pingkan\nHave fun!'
+      msg = 'Command list:\n-Roll d2\n-Roll d4\n-Roll d6\n-Roll d8\n-Roll d10\n-Roll d20\n-Roll d100\n\nThis Bot is created by Gary Jardin & altersky-penguin\nHave fun!'
       const echo = { type: 'text', text: msg };
       return client.replyMessage(event.replyToken, echo);
     }
